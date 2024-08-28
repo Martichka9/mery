@@ -1,0 +1,19 @@
+{
+  "name": "mery",
+  "version": "1.0.0",
+  "description": "mary-web-site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "martichka9",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0",
+    "gulp-cli": "^3.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.8"
+  }
+}
