@@ -4,14 +4,15 @@ $borderRadius: 0.3em;
 
 /*Site Colors*/
 // $primaryDarkColor: #471a7b;
-$primaryDarkColor: #013933;
-$primaryLightColor: #f7f4fb;
+$primaryDarkColor: rgb(86, 50, 148);
 $primaryLightColor: #f8fbf4;
 $shadowColor: #282031;
 $orange: rgb(255, 208, 0);
-$purple: rgb(103, 58, 183);
+$green: rgb(173, 248, 87);
+$darkGreen: rgb(43, 60, 28);
+$lightPurple: rgb(117, 81, 183);
 
-$boxShadows: 0 0 10px $primaryDarkColor;
+$boxShadows: 0 0 10px $shadowColor;
 
 
 @mixin displayFlex($justifyContent,$allignItems) {
@@ -25,7 +26,7 @@ $boxShadows: 0 0 10px $primaryDarkColor;
     display: grid;
     align-items: center;
     // justify-content: center;
-    text-align: justify;
+    text-align: center;
 }
 /*for buttons hover animations*/
 @mixin buttonsDefaultValues{
@@ -53,7 +54,6 @@ $boxShadows: 0 0 10px $primaryDarkColor;
 
 @mixin parallaxes ($imgLink, $imgPosition) {
     background-image: url($imgLink);
-    // background: linear-gradient(to bottom,rgba($orange, 0.2),rgba($purple, 0.4)),url($imgLink) $imgPosition fixed;
     background: url($imgLink) $imgPosition fixed;
     background-size: cover;
 }

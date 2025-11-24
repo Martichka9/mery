@@ -43,7 +43,12 @@ nav{
         justify-content: flex-start;
         height: 85px;
     }
-
+    .current-page a{
+        @include buttonsOnHoverValues($primaryLightColor, 0.3);
+        text-decoration: underline;
+        color: $darkGreen;
+        text-shadow: 1px 1px rgb(6 81 74 / .2);
+    }
     a {
         color:$primaryLightColor;
         text-shadow: 0 0 5px $primaryDarkColor;
@@ -55,34 +60,35 @@ nav{
         font-weight: bold;
         &:hover{
             @include buttonsOnHoverValues($primaryLightColor, 1);
-            color: $primaryDarkColor;
+            color: $darkGreen;
             text-shadow: none;
-            box-shadow: 0 0 10px rgba($orange,0.5) inset, 0 0 5px $primaryDarkColor;
+            box-shadow: 0 0 10px rgba($green,0.5) inset, 0 0 5px $primaryDarkColor;
         }
     }
 }
 
 .header-intro {
-    background-color: rgba(#fff, 0.7);
+    background-color: rgba($primaryLightColor, 0.7);
     max-width: 900px;
     margin: 18vh auto;
     @include displayGrid;
     grid-template-rows: 4em auto auto;
     padding: 2em;
     border-radius: $borderRadius;
-    color: $primaryDarkColor;
-    text-shadow: 0 0 3px $primaryLightColor;
+    color: $darkGreen;
+    text-shadow: 0 0 3px $green;
     box-shadow: $boxShadows;
     align-self: flex-start;
-    a{
-        margin: 1.5em auto;
-        padding: 0.5em 2em;
-        border: 1px solid $primaryDarkColor;
-        border-radius: $borderRadius;
-        max-width: 221px;
-        @include buttonsDefaultValues;
-        &:hover{
-            @include buttonsOnHoverValues($primaryDarkColor, 0.5);
+    p{
+        margin: 0;
+        font-size: 3.5em;
+        a{
+            @include buttonsDefaultValues;
+            padding: 0.5em;
+            color: $darkGreen;
+            &:hover{
+                @include buttonsOnHoverValues($primaryLightColor, 0.1);
+            }
         }
     }
 }
@@ -93,15 +99,29 @@ nav{
     box-shadow: $boxShadows;
     
     div.hf-container {
-        @include displayFlex(center, center);
+        @include displayFlex(start, center);
         height: 100%;
+        width: 80%;
+        margin: 0 auto;
     }
-    .contacts-block {height: 72px;}
+    .contacts-block {
+        height: 72px;
+        width: 100%;
+        h4{
+            color: $primaryDarkColor;
+            text-shadow: 1px 1px rgb(69 47 95 / 60%);
+        }
+    }
     ul {
-        @include displayFlex(center, center);
-    
+        @include displayFlex(space-evenly, center);
         li {
             margin: 0 .5em;
+            height: 50%;
+            a {
+                color: $primaryDarkColor;
+                font-weight: bold;
+                text-shadow: 1px 1px rgb(69 47 95 / 25%);
+            }
         }
     }
     .contact-links {
@@ -114,10 +134,6 @@ nav{
             background-color: $primaryDarkColor;
             color: $primaryLightColor;
             border-radius: 3px;
-        }
-        .fa-github-square, .fa-linkedin {
-            font-size: 1.2em;
-            margin-top: 4px;
         }
     }
     p {
