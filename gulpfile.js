@@ -17,7 +17,7 @@ gulp.task("sass", async function() {
 
 gulp.task('copy', function() {
     return gulp.src([
-		'_scss/*.css'
+		'_scss/**/*.css'
 		// '_scss/fa/css/*.css',
 		// '_scss/fa/fa/webfonts/*.eot',
 		// '_scss/fa/webfonts/*.svg',
@@ -58,6 +58,9 @@ gulp.task("watch", function() {
 			"./_data/*.json"
 		]
 	).on('change', gulp.series('jekyll-dev', 'sass', 'copy') );
+
+	gulp.watch('./js/*.js').on('change', gulp.series('jekyll-dev', 'sass', 'copy') );
+	
 	//).on('change', gulp.series('jekyll-dev', 'sass') );
 
 	gulp.watch( 'docs/**/*.html' ).on('change', browserSync.reload );

@@ -4,5 +4,23 @@ title: Mery
 permalink: /
 order: 10
 ---
-
-<h1>THIS IS HOME PAGE</h1>
+<section class="main-ad-blocks">
+    <article>
+        <!-- <h2 class="types-headings">Sales</h2> -->
+        <img class="img sale" src="./imgs/illustration-red-color-paper-sale-label-with-shadow.png" alt="Sale Image by nuraghies on Freepik">
+        <div class="sales">
+            <div class="big-sale"></div>
+            <div class="small-sale"></div>
+            <div class="small-sale"></div>
+            <div class="mid-sale"></div>
+        </div>
+    </article>
+    <article>
+        <h2>Check our new sugestions</h2>
+        {% include new_items.html %}    
+    </article>
+    <article>
+        <h2>For last time in the catalog</h2>
+        <div class="last_ones"></div>        
+    </article>
+</section>
