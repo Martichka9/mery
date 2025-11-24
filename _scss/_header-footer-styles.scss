@@ -1,0 +1,128 @@
+.home .site-header {
+    height: 606px;
+}
+
+.site-header {
+    background: rgba(103, 58, 183, 0.4);
+    @include backgroundOne; 
+    padding:  0 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    
+    .hf-container {
+        width: 100%;
+    }
+}
+/*Stiky header on scroll*/
+// .sticky {
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+//     z-index: 100;
+// }
+.home-page-header {
+    height: 99vh;
+    padding:  0 1.5em 1.5em;
+}
+.site-menu{
+   max-width: 900px;
+   margin: 0 auto;
+}
+
+.site-menu #menu-btn {
+    display: none;
+}
+.site-menu label {
+    display: none;
+    font-size: 1.5em;
+}
+nav{
+
+    ul {
+        @include displayFlex(center, center);
+        justify-content: flex-start;
+        height: 85px;
+    }
+
+    a {
+        color:$primaryLightColor;
+        text-shadow: 0 0 5px $primaryDarkColor;
+        text-decoration: none;
+        padding: 0.7em 1.2em;
+        font-style: italic;
+        border-radius: $borderRadius;
+        @include buttonsDefaultValues;
+        font-weight: bold;
+        &:hover{
+            @include buttonsOnHoverValues($primaryLightColor, 1);
+            color: $primaryDarkColor;
+            text-shadow: none;
+            box-shadow: 0 0 10px rgba($orange,0.5) inset, 0 0 5px $primaryDarkColor;
+        }
+    }
+}
+
+.header-intro {
+    background-color: rgba(#fff, 0.7);
+    max-width: 900px;
+    margin: 18vh auto;
+    @include displayGrid;
+    grid-template-rows: 4em auto auto;
+    padding: 2em;
+    border-radius: $borderRadius;
+    color: $primaryDarkColor;
+    text-shadow: 0 0 3px $primaryLightColor;
+    box-shadow: $boxShadows;
+    align-self: flex-start;
+    a{
+        margin: 1.5em auto;
+        padding: 0.5em 2em;
+        border: 1px solid $primaryDarkColor;
+        border-radius: $borderRadius;
+        max-width: 221px;
+        @include buttonsDefaultValues;
+        &:hover{
+            @include buttonsOnHoverValues($primaryDarkColor, 0.5);
+        }
+    }
+}
+
+.site-footer {
+    height: 72px;
+    background-color: $primaryLightColor;
+    box-shadow: $boxShadows;
+    
+    div.hf-container {
+        @include displayFlex(center, center);
+        height: 100%;
+    }
+    .contacts-block {height: 72px;}
+    ul {
+        @include displayFlex(center, center);
+    
+        li {
+            margin: 0 .5em;
+        }
+    }
+    .contact-links {
+        font-size: 1.6em;
+        color:$primaryDarkColor;
+        line-height: 0px;
+
+        &:hover i {
+            line-height: 32px;
+            background-color: $primaryDarkColor;
+            color: $primaryLightColor;
+            border-radius: 3px;
+        }
+        .fa-github-square, .fa-linkedin {
+            font-size: 1.2em;
+            margin-top: 4px;
+        }
+    }
+    p {
+        margin: 0 1em;
+        text-shadow: 0 0 1px rgba($primaryDarkColor,0.5);
+        font-style: italic;
+    }
+}

@@ -1,0 +1,79 @@
+$margin-top-layout: -6em;
+$distortion: 6deg;
+$borderRadius: 0.3em;
+
+/*Site Colors*/
+// $primaryDarkColor: #471a7b;
+$primaryDarkColor: #013933;
+$primaryLightColor: #f7f4fb;
+$primaryLightColor: #f8fbf4;
+$shadowColor: #282031;
+$orange: rgb(255, 208, 0);
+$purple: rgb(103, 58, 183);
+
+$boxShadows: 0 0 10px $primaryDarkColor;
+
+
+@mixin displayFlex($justifyContent,$allignItems) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $allignItems;
+    flex-wrap: wrap;
+}
+
+@mixin displayGrid{
+    display: grid;
+    align-items: center;
+    // justify-content: center;
+    text-align: justify;
+}
+/*for buttons hover animations*/
+@mixin buttonsDefaultValues{
+    transform: scale(1);
+    font-weight: initial;
+    background-color: initial;
+    transition: transform 0.3s ease-in, font-weight 0.3s ease-in, background-color 0.3s ease-in;
+}
+@mixin buttonsOnHoverValues($bgColorValue,$colorOpacity){
+    transform: scale(1.1);
+    font-weight: bold;
+    background-color: rgba($bgColorValue, $colorOpacity);
+}
+/*end buttons hover animations*/
+@mixin headerFooterContainer{
+    width: 100%;
+    background-color: $primaryLightColor;
+    box-shadow: 0px 0px 9px 3px $shadowColor, 0 0 25px 5px $insetShadowColor inset;
+}
+
+@mixin navMainAnimationValues {
+    transform: translateY(-100px);
+    animation: navBtns 0.7s ease-out forwards;
+}
+
+@mixin parallaxes ($imgLink, $imgPosition) {
+    background-image: url($imgLink);
+    // background: linear-gradient(to bottom,rgba($orange, 0.2),rgba($purple, 0.4)),url($imgLink) $imgPosition fixed;
+    background: url($imgLink) $imgPosition fixed;
+    background-size: cover;
+}
+
+@mixin containerStyle {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+@mixin groupTitle {
+    width: 100%;
+    text-align: center;
+}
+
+//header 
+@mixin backgroundOne {
+    // background: linear-gradient(to bottom,rgba(255,141,0,.2),rgba(103,58,183,.4)),url(https://images.unsplash.com/photo-1498721409281-998093cc905b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) no-repeat fixed;
+    // background: url(https://plus.unsplash.com/premium_photo-1670876807480-ee93dd1d4be7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat fixed;
+    background: url(https://images.unsplash.com/photo-1491245338813-c6832976196e?q=45&w=1980) no-repeat;
+    background-size: cover;
+    background-position-y: 40%;
+}

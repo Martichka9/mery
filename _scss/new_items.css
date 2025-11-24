@@ -1,0 +1,147 @@
+#container {
+    width: 800px;
+    height: 300px;
+    display: block;
+    margin: 0 auto; 
+    padding: 10px 0 10px;
+    box-sizing: border-box;
+  }
+  .slick-slide img{
+    width:200px;
+    height:250px;
+    float:left;
+    margin:3px;
+    box-shadow: 3px 3px 3px;
+  }
+  /* .slick-prev, .slick-next {
+    position: absolute;
+    font-weight: bold;
+    background: none;
+    border:none;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px ;
+  } */
+  /* .slick-prev {
+    left: -50px;
+    top: 60px;
+  }
+  .slick-next {
+    left: 825px;
+    top: 60px;
+  } */
+  
+  /* The Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: absolute; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 50%; /* Full width */
+      height: 600px; /* Full height */
+      overflow: hidden; /* Enable scroll if needed */
+      background-color: rgba(182,155,228,0.7);
+      margin: 30px auto;/* Black w/ opacity */
+      border-radius: 15px 15px;
+      border: 2px solid #8e6fc5;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+      left: 15%;
+      display: block;
+      width: calc(100% - 30%);
+      height: calc(100% - 10%);
+  }	
+  
+  .modal-content {    
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+  }
+  
+  
+  .slider .slick-dots {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    li {
+
+    }
+   }
+
+   
+
+  @-webkit-keyframes zoom {
+      from {-webkit-transform:scale(0)} 
+      to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+      from {transform:scale(0)} 
+      to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #8e6fc5;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+      .modal-content {
+          width: 100%;
+      }
+  }
+
+
+
+
+
+
+
+  /*---------------------------------------------
+  =================test new====================*/
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
