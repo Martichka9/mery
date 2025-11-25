@@ -1,7 +1,33 @@
 .about, .contacts{
+    background-color: $primaryLightColor;
     width: 70%;
+    min-height: inherit;
     margin: 0 auto;
     padding: 1em;
     display: grid;
     align-items: center;
+    text-shadow: 0.5px 0.5px $primaryDarkColor;
+
+    figure {
+        margin: 1em;
+        font-style: italic;
+        figcaption {
+            text-align: right;
+        }
+    }
+    .toTheGalery{
+        text-align: center;
+        margin: 1em auto 0;
+        a{
+            @include buttonsDefaultValues;
+            color: $darkGreen;
+            &:hover{
+                @include buttonsOnHoverValues($primaryLightColor, 0.1);
+            }
+        }
+    }
+
+    iframe {
+        width:100%;
+    }
 }

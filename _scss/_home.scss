@@ -7,8 +7,9 @@
         position: relative;
         margin: 2em auto;
 
-        h2 {
+        h3 {
             margin: 1em auto;
+            text-align: center;
         }
 
         .types-headings {
@@ -49,10 +50,6 @@
                 background: url(https://images.unsplash.com/photo-1515273283790-38b8a1dc851e?q=40&w=600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center;
                 background-size: cover;
             }
-        }
-        h2 {
-            text-align: center;
-            margin: 0 10%;
         }
     }
 }

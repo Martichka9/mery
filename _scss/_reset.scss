@@ -2,15 +2,19 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: $primaryDarkColor;
+    font-family: 'Comfortaa', sans-serif;
+    text-shadow: 0.5px 0.5px $primaryDarkColor;
 }
 
 body {
-    color: $primaryDarkColor;
-    font-family: 'Comfortaa', sans-serif;
-    font-size: 1.1em;
+
     // font-family: 'Acme', sans-serif;
     // font-family: 'Kalam', cursive;
     // font-family: 'Chewy', cursive;
+}
+section{
+    min-height: calc(100vh - 174px);
 }
 
 ul {

@@ -94,7 +94,8 @@ nav{
 }
 
 .site-footer {
-    height: 72px;
+    padding: 0.5em 0 0;
+    min-height: 72px;
     background-color: $primaryLightColor;
     box-shadow: $boxShadows;
     
@@ -120,7 +121,7 @@ nav{
             a {
                 color: $primaryDarkColor;
                 font-weight: bold;
-                text-shadow: 1px 1px rgb(69 47 95 / 25%);
+                text-shadow: 1px 1px rgb(69 47 95 / 50%);
             }
         }
     }
