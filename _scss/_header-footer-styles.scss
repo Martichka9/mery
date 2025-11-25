@@ -95,18 +95,16 @@ nav{
 
 .site-footer {
     padding: 0.5em 0 0;
-    min-height: 72px;
+    min-height: fit-content;
     background-color: $primaryLightColor;
     box-shadow: $boxShadows;
     
     div.hf-container {
         @include displayFlex(start, center);
-        height: 100%;
         width: 80%;
         margin: 0 auto;
     }
     .contacts-block {
-        height: 72px;
         width: 100%;
         h4{
             color: $primaryDarkColor;
